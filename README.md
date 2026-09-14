@@ -12,6 +12,8 @@ The core loop is intentionally small: capture into Inbox, retrieve with search/t
 
 - Next.js 16 App Router, React 19, TypeScript strict
 - Tailwind CSS and shadcn/ui
+- TanStack Query for client-side server state; Zustand for bounded ephemeral UI state
+- Motion for interaction animation; next-intl for localization
 - Better Auth with Google and GitHub OAuth
 - MongoDB with the official Node.js driver and Better Auth MongoDB adapter
 - Zod at environment and input trust boundaries
