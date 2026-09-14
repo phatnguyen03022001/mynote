@@ -12,6 +12,8 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 Read `VISION.md` and `RULES.md` before non-trivial work, then read only the subsystem docs relevant to the change. Keep the Next.js generated block above intact; `next dev` may regenerate it.
 
+Follow the pinned engineering-governance policy in `RULES.md`. Do not substitute a newer `agent-skills` revision from memory or by following `dev`; the exact commit pin is authoritative until the repository owner changes it.
+
 ## Working policy
 
 - Work on `main` only unless the repository owner explicitly changes the policy.

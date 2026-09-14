@@ -12,7 +12,9 @@
     "test:watch": "vitest",
     "e2e": "playwright test",
     "check": "pnpm lint && pnpm typecheck && pnpm test",
-    "e2e:install": "playwright install chromium"
+    "e2e:install": "playwright install chromium",
+    "git:prepush": "node scripts/verify-publication.mjs pre",
+    "git:verify-push": "node scripts/verify-publication.mjs post"
   },
   "dependencies": {
     "@base-ui/react": "^1.8.0",

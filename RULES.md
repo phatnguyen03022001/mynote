@@ -2,6 +2,16 @@
 
 These are project invariants. Prefer the smallest correct change that preserves them.
 
+## Engineering governance
+
+- Reusable engineering guidance is pinned to `phatnguyen03022001/agent-skills` branch `dev` at commit `6930b8da48c9466389653fc55eb16f49eebbb28f`.
+- `architect` and `executor` are intentionally excluded from MyNote's pinned guidance unless the repository owner explicitly changes that scope.
+- MyNote's explicit product rules and repository state outrank reusable guidance. Apply only skills whose trigger matches the current change.
+- A governance-pin update is an intentional policy change: inspect the upstream diff before changing the pinned commit.
+- For current, disputed, security-sensitive, or version-sensitive engineering facts, record working evidence as `FACT`, `INFERENCE`, `ASSUMPTION`, or `UNKNOWN`. Transient research notes do not belong in the repository unless they become a durable decision.
+- Before committing a consequential change, review the actual diff against `VISION.md`, this file, and the relevant subsystem docs. Check scope, ownership, dependency direction, orphan files, security implications, and verification coverage.
+- Before every push to `main`, run `pnpm git:prepush`. After the push, run `pnpm git:verify-push`. Remote drift is a hard stop; never force-push around it.
+
 ## Architecture
 
 - Keep MyNote a modular monolith. Do not add services, queues, caches, repositories, or generic abstractions without a current requirement.
