@@ -10,6 +10,8 @@ Keep development, preview/staging, and production credentials/databases isolated
 
 The immutable release unit is the tested source commit and its standalone/Docker build. CI must pass lint, typecheck, tests, production build, E2E smoke, and Docker build before a release is considered promotable.
 
+Vercel Git auto-deployments are disabled in `vercel.json`. Deployments to Vercel must be explicitly initiated; a push to `main` must not deploy by itself.
+
 Application startup must not perform destructive data migrations. Schema/data migrations are explicit, restartable operations run before code depends exclusively on the new shape.
 
 ## Health semantics
