@@ -18,6 +18,8 @@ Do not introduce a global client state library for server-owned note data. URL s
 
 Tailwind CSS and shadcn/ui are the component baseline. Add shadcn primitives on demand rather than installing a catalog. Product components should compose primitives without hiding semantics behind generic "smart" abstractions.
 
+The visual system is neutral monochrome: white-to-black surfaces and grayscale accents in both light and dark themes. Semantic destructive states may use red. Theme preference defaults to the operating-system setting and persists an explicit user override.
+
 ## Interaction principles
 
 - Capture is the dominant action and should remain reachable without navigation ceremony.

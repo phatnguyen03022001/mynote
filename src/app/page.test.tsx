@@ -8,5 +8,6 @@ describe("Home", () => {
 
     expect(screen.getByRole("heading", { name: "MyNote" })).toBeInTheDocument();
     expect(screen.getByText("Capture first. Organize later.")).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /sign in/i })).toHaveAttribute("href", "/signin");
   });
 });

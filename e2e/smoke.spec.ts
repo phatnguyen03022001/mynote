@@ -11,3 +11,9 @@ test("health endpoint is live and dependency-free", async ({ request }) => {
   expect(response.ok()).toBe(true);
   await expect(response.json()).resolves.toEqual({ status: "ok" });
 });
+
+test("app redirects unauthenticated visitors to sign in", async ({ page }) => {
+  await page.goto("/app");
+  await expect(page).toHaveURL(/\/signin$/);
+  await expect(page.getByRole("heading", { name: /sign in to mynote/i })).toBeVisible();
+});
